@@ -18,11 +18,14 @@ int main(int argc, char const *argv[]) {
  print_postorder(tree);
  printf("\n");
  printf("Size:%d\n",size(tree));
- printf("Max depth:%d\n",max_depth(tree));
- printf("Min Value:%d\n",min_value(tree));
- printf("Max Value:%d\n",max_value(tree));
+ printf("Max depth:%d\n", max_depth(tree));
+ printf("Min Value:%d\n", min_value(tree));
+ printf("Max Value:%d\n", max_value(tree));
 
- lookup(tree, atoi(argv[1]));
+ int sum = atoi(argv[1]);
+ printf("Has Path Sum %d: %d\n", sum, has_path_sum(tree,sum));
+
+ //lookup(tree, atoi(argv[1]));
 
  return 0;
 }

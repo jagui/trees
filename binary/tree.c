@@ -106,3 +106,10 @@ void print_postorder(node_t* tree){
   print_postorder(tree->right);
   printf("%d ", tree->value);
 }
+
+int has_path_sum(node_t* tree, int sum){
+  if(tree == NULL)
+    return sum == 0;
+  sum = sum - tree->value;
+  return (has_path_sum(tree->left,sum) || has_path_sum(tree->right,sum));
+}
