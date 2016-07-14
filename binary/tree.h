@@ -14,3 +14,4 @@ int max_value(node_t* tree);
 void print_tree(node_t* tree);
 void print_postorder(node_t* tree);
 int has_path_sum(node_t* tree, int sum);
+void print_paths(node_t* tree);

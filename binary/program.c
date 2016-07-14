@@ -25,6 +25,7 @@ int main(int argc, char const *argv[]) {
  int sum = atoi(argv[1]);
  printf("Has Path Sum %d: %d\n", sum, has_path_sum(tree,sum));
 
+ print_paths(tree);
  //lookup(tree, atoi(argv[1]));
 
  return 0;

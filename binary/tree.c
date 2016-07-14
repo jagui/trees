@@ -113,3 +113,26 @@ int has_path_sum(node_t* tree, int sum){
   sum = sum - tree->value;
   return (has_path_sum(tree->left,sum) || has_path_sum(tree->right,sum));
 }
+
+void print_path_recursive(node_t* node, int path[], int pathLen){
+  //Insert in the array
+  path[pathLen++] = node->value;
+
+  //If it's a leaf node, print the path
+  if(node->left==NULL && node->right == NULL){
+    for(int i = 0; i<pathLen;i++){
+      printf("%d ",path[i]);
+    }
+    printf("\n");
+  }
+  else{
+    print_path_recursive(node->left, path, pathLen);
+    print_path_recursive(node->right, path, pathLen);
+  }
+}
+
+void print_paths(node_t* tree){
+  int path[100];
+
+  print_path_recursive(tree,path,0);
+}
